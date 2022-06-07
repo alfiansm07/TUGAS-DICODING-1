@@ -1,142 +1,87 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body {
+  font-family: "Mukta", sans-serif;
+  padding: 0;
+  margin: 0;
 }
-.navbar{
-    background: #131313;
-    height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 99999;
+nav {
+  background-color: #111;
+  color: azure;
+  padding: 20px 50px;
 }
-.navbar__container{
-    display: flex;
-    justify-content: space-between ;
-    height: 80px;
-    z-index: 1;
-    width: 100%;
-    max-width: 1300px;
-    margin: 0 auto;
-    padding: 0 50px;
+.navTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-#navbar__logo{
-    font-weight: 800;
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0944 0%, #ffb199 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color : transparent;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-size: 2rem;
+.search {
+  display: flex;
+  align-items: center;
+  background-color: grey;
+  padding: 10px 20px;
+  border-radius: 10px;
 }
-
-.fa-gem{
-    margin-right: 0.5rem;
+.searchInput {
+  border: none;
+  background-color: transparent;
 }
-.navbar__menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    text-align: center;
+input:focus,
+input.form-control:focus {
+  outline: none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
 }
-.navbar__item{
-    height: 80px;
+.searchInput::placeholder {
+  color: lightgray;
 }
-
-.navbar__links{
-color: #fff;
-display: flex;
-align-items: center;
-justify-content: center;
-text-decoration: none;
-padding: 0 1rem;
-height: 100%;
+.limitedOffer {
+  font-size: 20px;
+  border-bottom: 2px solid green;
 }
-.navbar__btn{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 0 1rem;
-    width: 100%;
+.navBottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px 20px;
-    height: 100%;
-    width: 100%;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #c42d07;
-    color: white;
+.menuItem {
+  margin-right: 50px;
+  cursor: pointer;
+  color: lightgray;
+  font-weight: 400;
 }
-.button:hover{
-    background: #4b37ff;
-    transition: all 0.5s ease;
+.slider {
+  background: url(https://images.unsplash.com/photo-1533135091724-62cc5402aa20?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80);
+  background-size: cover;
+  /* clip-path: polygon(
+    50% 0%,
+    100% 0,
+    100% 43%,
+    100% 88%,
+    68% 100%,
+    32% 100%,
+    0 88%,
+    0% 43%,
+    0 0
+  ); */
 }
-.navbar__links:hover{
-    color: #f77062;
-    transition: all 0.5s ease;
+.sliderWrapper {
+  display: flex;
+  width: 500vw;
 }
-
-@media screen and (max-width: 960px){
-
-    .navbar__container{
-        display: flex;
-        justify-content: space-between;
-        height: 80px;
-        z-index: 1;
-        width: 100%;
-        max-width: 1300px;
-        padding: 0;
-        
-    }
-    .navbar__menu{
-        display: grid;
-        grid-template-columns: auto;
-        margin: 0;
-        width: 100%;
-        position: absolute;
-        top: -1000px;
-        opacity: 0;
-        transition: all 0.5s ease;
-        height: 50vh;
-        z-index: -1;
-        
-    }
+.sliderItem {
+  display: flex;
+  width: 100vw;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.sliderTitle {
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  color: white;
+  font-size: 60px;
+  font-weight: 900;
+  text-align: center;
+}
